@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+</head>
+<style>
+    * {
+        font-size: 18px;
+        font-family:Verdana, Geneva, Tahoma, sans-serifm
+    }
+
+    body {
+        background-color: gray;
+    }
+
+    #sbutton {
+        color: white;
+        background-color: blueviolet;
+        font-size: 24px;
+        border: 2px solid white;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    input { width: 250px; }
+    textarea { width: 250px; }
+    
+    form { 
+        background-color: #ccc;
+        padding: 15px;
+        border-radius: 3px;
+        width: 80%;
+    }
+
+</style>
+<body>
+    <h1 style="font-size: 28px;">Contact Me</h1>
+    <form action="#" method="post" style="text-align: center;">
+        <div style="text-align: left; margin-left: 30%; margin-right: 30%;">
+            <label for="myname">Name: </label><br/>
+            <input type="text" name="myname" id="myname" required/><br/><br/>
+
+            <label for="subject">Subject: </label><br/>
+            <input type="text" name="subject" id="subject" 
+                placeholder="CS 101" required/><br/><br/>
+
+            <textarea name="tbody" id="tbody" required>Enter message...</textarea><br/><br/>
+
+            <label for="attach">Attachments: </label><br/>
+            <input type="file" name="attach" id="attach"/><br/><br/>
+        
+            <input type="submit" value="Submit" id="sbutton"/>
+        </div>
+    </form>
+</body>
+</html>
