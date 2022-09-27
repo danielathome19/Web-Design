@@ -25,6 +25,7 @@
     label { font-weight: bold; }
     input { width: 250px; }
     textarea { width: 250px; }
+    input, textarea { max-width: 250px; }
     
     #fdiv { 
         background-color: #ccc;
@@ -32,26 +33,45 @@
         width: 50%;
         text-align: center;
         /* 30 top/bot, 15 l/r */
-        padding: 30px 15px; 
+        padding: 30px 15px;
+    }
+
+    .rqd {
+        color: red;
+        font-weight: normal;
     }
 
 </style>
 <body>
     <h1 style="font-size: 28px;">Contact Me</h1>
-    <form action="#" method="post" style="text-align: center;">
+    <form action="#" method="post" style="text-align: center;" onsubmit="alert('Not implemented yet');">
         <div id="fdiv" style="margin-left: 30%; margin-right: 30%;">
-            <label for="myname">Name: </label><br/>
+            <label for="myname">Name: <span class="rqd">*</span></label><br/>
             <input type="text" name="myname" id="myname" required/><br/><br/>
 
-            <label for="subject">Subject: </label><br/>
+            <label for="subject">Subject: <span class="rqd">*</span></label><br/>
             <input type="text" name="subject" id="subject" 
                 placeholder="CS 101" required/><br/><br/>
-
-            <textarea name="tbody" id="tbody" required>Enter message...</textarea><br/><br/>
+            
+            <span class="rqd">*</span><br/>
+            <textarea name="tbody" id="tbody" placeholder="Enter message..." required></textarea><br/><br/>
 
             <label for="attach">Attachments: </label><br/>
-            <input type="file" name="attach" id="attach"/><br/><br/>
-        
+            <input type="file" name="attach" id="attach" style="background-color: white !important;"/><br/><br/>
+            
+            <label for="priority">Priority: <span class="rqd">*</span></label><br/>
+            <select name="priority" id="priority" required>
+                <option disabled selected value>-- Select an option --</option>
+                <option value="low">Low</option>
+                <option value="med">Medium</option>
+                <option value="high">High</option>
+                <option value="crit">Critical</option>
+            </select><br/><br/>
+
+            <input type="radio" name="flwup" id="flwup" value="yes"/>Yes
+            <input type="radio" name="flwup" id="flwup" value="no"/>No
+            <br/><br/>
+
             <input type="submit" value="Submit" id="sbutton"/>
         </div>
     </form>
