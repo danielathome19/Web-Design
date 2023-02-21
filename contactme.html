@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+</head>
+<body>
+    <center><h1>Contact Me</h1></center>
+
+    <form action="#" method="post" id="contactform"
+          onsubmit="alert('Not implemented yet');">
+        <div id="fdiv">
+            <label for="myname">Name: </label> <br/>
+            <input type="text" name="myname" 
+                   id="myname" required> <br/><br/>
+
+            <label for="myemail">Email: </label> <br/>
+            <input type="email" name="myemail" 
+                   id="myemail" required> <br/><br/>
+
+            <label for="subject">Subject: </label> <br/>
+            <input type="text" name="subject" id="subject"
+                   placeholder="CS 101" required> <br/><br/>
+
+            <textarea name="tbody" id="tbody" placeholder="Enter message..." 
+                      required></textarea> <br/><br/>
+            
+            <label for="priorty">Priority: </label> <br/>
+            <select name="priority" id="priorty" required>
+                <option disabled selected value>-- Select an option --</option>
+                <option value="low">Low</option>
+                <option value="med">Medium</option>
+                <option value="high">High</option>
+                <option value="crit">Critical</option>
+            </select> <br/><br/>
+
+            <label for="attach">Attachments: </label> <br/>
+            <input type="file" name="attach" id="attach"> <br/><br/>
+
+            <label for="flwup">Do you want a follow-up email?</label> <br/>
+            <input type="radio" name="flwup" id="flwupy" value="yes" />
+            <label for="flwupy" class="flwlbl">Yes</label>
+            <input type="radio" name="flwup" id="flwupn" value="no" />
+            <label for="flwupn" class="flwlbl">No</label> <br/><br/>
+
+            <input type="submit" value="Submit" id="sbutton"/>
+        </div>
+    </form>
+</body>
+</html>
