@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Semantic Layout</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; }
+        header {
+            background: #777;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            font-size: 35px;
+        }
+        section { display: flex; }
+        nav {
+            flex: 1;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul { list-style-type: none; padding: 0; }
+        article {
+            flex: 3;
+            background: #eee;
+            padding: 10px;
+        }
+        footer {
+            background: #888;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            section { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <header>
+            <h2>Cities</h2>
+        </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#">London</a></li>
+                    <li><a href="#">Paris</a></li>
+                    <li><a href="#">Tokyo</a></li>
+                </ul>
+            </nav>
+
+            <article>
+                <h1>London</h1>
+                <p>London is the capital and largest city of England
+                    and the United Kingdom, with a population of just 
+                    under 9 million.
+                </p>
+                <p>Standing on the River Thames, London has been a major
+                    settlement for two millenia, its history going back to
+                    its founding by the romans, who named it Londinium.
+                </p>
+            </article>
+        </section>
+
+        <footer>
+            <p>Footer &copy; Copyright 2023</p>
+        </footer>
+    </div>
+</body>
+</html>
