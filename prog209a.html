@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog209a</title>
+</head>
+<body>
+    <script>
+        var nums = [];  // Empty array
+        for (var lcv = 0; lcv < 400; lcv++) {
+            // Randomly generate an int between [1, 1000]
+            var n = Math.round(Math.random() * 1000);
+            nums.push(n);
+        }
+
+        var lt = 0;
+        var gte = 0;
+        for (var lcv = 0; lcv < nums.length; lcv++) {
+            var c = nums[lcv];
+            if (c >= 500) {
+                gte++;  // gte += 1  or  gte = gte + 1
+            } else {
+                lt++;
+            }
+        }
+
+        document.writeln("# of numbers >= 500: " + gte + "<br/>");
+        document.writeln("# of numbers < 500: " + lt + "<br/>");
+        document.writeln("# of numbers: " + nums.length + "<br/><br/>");
+        document.writeln(nums);
+    </script>
+</body>
+</html>
