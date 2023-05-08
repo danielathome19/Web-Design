@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Notes</title>
+</head>
+<body>
+    <p id="out"></p>
+    <script>
+        // Make a new array (list) of cars
+        var cars = ["Saab", "Volvo", "BMW"];
+        // Add a car
+        cars[3] = "GMC";
+        cars[4] = "Subaru";
+        // Change a car
+        cars[0] = "Chevrolet";
+        // Display cars
+        document.getElementById("out").innerHTML = cars;
+
+        // Print one element at a time
+        var msg = "<ul>";
+        for (var lcv = 0; lcv < cars.length; lcv++) {
+            msg += "<li>" + cars[lcv] + "</li>";
+        }
+        msg += "</ul>";
+        document.write(msg);
+
+        // Add car to end of list
+        cars.push("Pontiac"); 
+        // Print list again using forEach shorthand
+        var msg2 = "<ol>";
+        function doli(car) {
+            msg2 += "<li>" + car + "</li>";
+        }
+        cars.forEach(doli);
+        msg2 += "</ol>";
+        document.write(msg2);
+    </script>
+</body>
+</html>
