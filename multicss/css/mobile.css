@@ -1,0 +1,5 @@
+/* Mobile Query */
+@media only screen and (max-width: 480px) {
+    body { background: lightgray; }
+    p { width: 80%; }
+}
