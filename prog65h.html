@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog65h</title>
+</head>
+<body>
+    <label for="pnds">Pounds: </label>
+    <input type="number" id="pnds" name="pnds">
+
+    <label for="shl">Shillings: </label>
+    <input type="number" id="shl" name="shl">
+    
+    <label for="pnce">Pence: </label>
+    <input type="number" id="pnce" name="pnce">
+
+    <button onclick="
+        var pnds = document.getElementById('pnds').value;
+        pnds = Number(pnds);
+        var shl = document.getElementById('shl').value;
+        shl = Number(shl);
+        var pnce = document.getElementById('pnce').value;
+        pnce = Number(pnce);
+        var decp = pnds + shl/20 + pnce/12/20;
+        decp = decp.toFixed(2);  /* round to 2 decimal places */
+        document.writeln('Decimal Pounds = £' + decp);
+    ">Convert to Decimal Pounds</button>
+</body>
+</html>
