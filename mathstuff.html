@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Things</title>
+    <script src="mathstuff.js" defer></script>
+</head>
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="doMath()">Run Math Stuff</button>
+    <button onclick="reset()">Reset</button>
+    <p id="output"></p>
+
+    <script>
+        function reset() {
+            document.getElementById('output').innerHTML = "";
+        }
+    </script>
+</body>
+</html>
