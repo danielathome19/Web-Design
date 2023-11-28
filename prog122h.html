@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog122h</title>
+</head>
+<body>
+    <p id="out"></p>
+    <script>
+        var msg =
+        "Number &emsp; Square &emsp; Square Root &emsp; Cube &emsp; 4th Root<br/>";
+        /* var lcv = 1;  // Loop Control Variable
+        while (lcv < 21) {
+            var ...
+            msg += ...
+            lcv++;  // Prevent infinite loop
+        } */
+        for (var lcv = 1; lcv < 21; lcv++) {
+            var sqre = lcv**2;
+            var sqrt = Math.sqrt(lcv);
+            var cube = lcv**3;
+            var ftrt = lcv**(1.0/4.0);  // nth root is num**(1.0/n)
+            msg += lcv + "&emsp;" + sqre + "&emsp;" +
+                   sqrt.toFixed(4) + "&emsp;" + cube + "&emsp;" +
+                   ftrt.toFixed(4) + "<br/>";
+        }
+        document.getElementById("out").innerHTML = msg;
+    </script>
+</body>
+</html>
