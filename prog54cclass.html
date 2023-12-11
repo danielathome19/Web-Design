@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog54c with Classes</title>
+</head>
+<body>
+    <input type="number" id="rad" name="rad">
+    <button onclick="doMath()">Calculate</button>
+    <p id="out"></p>
+
+    <script>
+        class Circle {
+            constructor(radius) {
+                this.radius = radius;
+                this.PI = 3.14159;
+                this.area = 0;
+                this.circumference = 0;
+            }
+
+            calc() { // Calculate this.area and this.circumference
+            }
+
+            getArea() { // Return this.area
+            }
+
+            getCircumference() { // Return this.circumference
+            }
+        }
+
+        function doMath() {
+            var rad = Number(document.getElementById("rad").value);
+            var circ = new Circle(rad);
+            circ.calc();
+            document.getElementById("out").innerHTML =
+                "Area: " + circ.getArea() + "<br/>Circumference: "
+                         + circ.getCircumference() + "<br/>";
+        }
+    </script>
+</body>
+</html>
