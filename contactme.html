@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+</head>
+<body>
+    <center><h1>Contact Me</h1></center>
+
+    <form action="#" method="post" id="contactform"
+          style="text-align:center;" onsubmit="alert('Not implemented yet');">
+        <fieldset>
+            <label for="myname">Name: </label> <br/>
+            <input type="text" name="myname" id="myname" required> <br/><br/>
+
+            <label for="myemail">Email: </label> <br/>
+            <input type="email" name="myemail" id="myemail" required> <br/><br/>
+
+            <label for="subject">Subject: </label> <br/>
+            <input type="text" name="subject" id="subject"
+                   placeholder="CS 101" required> <br/><br/>
+
+            <textarea name="tbody" id="tbody" placeholder="Enter message..."
+                      required></textarea> <br/><br/>
+
+            <label for="priority">Priority: </label> <br/>
+            <select name="priority" id="priority" required>
+                <option disabled selected value>-- Select an option --</option>
+                <option value="low">Low</option>
+                <option value="med">Medium</option>
+                <option value="high">High</option>
+                <option value="crit">Critical</option>
+            </select> <br/><br/>
+
+            <!-- TODO : file and radio -->
+
+            <input type="submit" value="Submit" id="sbutton">
+        </fieldset>
+    </form>
+</body>
+</html>
