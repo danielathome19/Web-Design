@@ -4,6 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
+    <style>
+        * {
+            font-size: 18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            color: white;
+            background: blueviolet;
+            font-size: 24px;
+            padding: 15px;
+            border: 2px solid white;
+            border-radius: 10px;  /* round corners */
+        }
+
+        body     { background: #555; }
+        label    { font-weight: bold; }
+        h1       { font-size: 28px; color: white; }
+        textarea { min-width: 250px; min-height: 50px; }
+        form     { min-width: 550px; margin-bottom: 20px; }
+        input, textarea { max-width: 250px; }
+        .rqd     { color: red; font-weight: normal; }
+        .flwlbl  { font-weight: normal; }
+
+        #attach {
+            background: white !important;
+            border: 1px solid gray;
+            border-radius: 3px;
+            padding-right: 3px;
+        }
+
+        fieldset {
+            border-radius: 5px;
+            background: #ccc;
+            border: none;
+            width: 50%;
+            margin: 0 auto;
+            padding: 30px 15px;  /* 30 top/bot, 15 l/r */
+        }
+    </style>
 </head>
 <body>
     <center><h1>Contact Me</h1></center>
@@ -11,20 +51,20 @@
     <form action="#" method="post" id="contactform"
           style="text-align:center;" onsubmit="alert('Not implemented yet');">
         <fieldset>
-            <label for="myname">Name: </label> <br/>
+            <label for="myname">Name: <span class="rqd">*</span></label> <br/>
             <input type="text" name="myname" id="myname" required> <br/><br/>
 
-            <label for="myemail">Email: </label> <br/>
+            <label for="myemail">Email: <span class="rqd">*</span></label> <br/>
             <input type="email" name="myemail" id="myemail" required> <br/><br/>
 
-            <label for="subject">Subject: </label> <br/>
+            <label for="subject">Subject: <span class="rqd">*</span></label> <br/>
             <input type="text" name="subject" id="subject"
                    placeholder="CS 101" required> <br/><br/>
 
             <textarea name="tbody" id="tbody" placeholder="Enter message..."
                       required></textarea> <br/><br/>
 
-            <label for="priority">Priority: </label> <br/>
+            <label for="priority">Priority: <span class="rqd">*</span></label> <br/>
             <select name="priority" id="priority" required>
                 <option disabled selected value>-- Select an option --</option>
                 <option value="low">Low</option>
@@ -33,9 +73,19 @@
                 <option value="crit">Critical</option>
             </select> <br/><br/>
 
-            <!-- TODO : file and radio -->
+            <label for="attach">Attachments: </label> <br/>
+            <input type="file" name="attach" id="attach" multiple> <br/><br/>
 
-            <input type="submit" value="Submit" id="sbutton">
+            <label for="flwup">Do you want a follow-up email?</label> <br/>
+            <input type="radio" name="flwup" id="flwupy" value="yes">
+            <label for="flwupy" class="flwlbl">Yes</label>
+            <input type="radio" name="flwup" id="flwupn" value="no">
+            <label for="flwupn" class="flwlbl">No</label> <br/><br/>
+
+            <input type="hidden" id="humansOnly" name="humansOnly">
+
+            <!-- <input type="submit" value="Submit" id="sbutton"> -->
+            <button>Submit</button>
         </fieldset>
     </form>
 </body>
