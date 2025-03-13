@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudoclasses</title>
+    <style>
+        /* Change the highlight color */
+        *::selection { background: lightcoral; }
+        *::-moz-selection { background: lightcoral; }
+
+        a:link {  /* Link that hasn't been visited */
+            color: green;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        a:hover {
+            color: blue;
+            background: gray;
+            text-decoration: underline;
+        }
+
+        a:visited { color: black; }
+        a:active { color: red; }
+        div:not(:last-child) { margin-bottom: 2rem; }
+
+        input {
+            /* top | right | bottom | left */
+            padding: 6px 12px 6px 12px;
+            /* padding: 6px 12px; top/bottom left/right */
+            border: 2px solid purple;
+            border-radius: 3px;
+            color: blue;
+            margin: 2px;
+        }
+
+        input[type=text] { color: purple; }
+        input[type=text]:focus {
+            color: blueviolet;
+            border: 5px solid plum;
+        }
+        input[type=submit]        { background: #c0ffee;   }
+        input[type=submit]:hover  { background: #deadbeef; }
+        input[type=submit]:active { background: #5eabed;   }
+
+        img { border: 3px solid transparent; }
+        img:hover { border: 3px solid red; }
+
+        :root {
+            --bg-color: #16161d;  /* Eigengrau */
+        }
+
+        body { background: var(--bg-color); }
+
+        * {
+            /* Color of Infinite Temperature */
+            scrollbar-color: #94b1ff transparent;
+            scrollbar-width: thin;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+
+    <div>
+        <input type="text" placeholder="Some text"/>
+        <input type="submit" value="Submit"/>
+    </div>
+
+    <div>
+        <img src="https://picsum.photos/id/10/200" alt="Placeholder 1">
+        <img src="https://picsum.photos/id/20/200" alt="Placeholder 2">
+        <img src="https://picsum.photos/id/30/200" alt="Placeholder 3">
+    </div>
+</body>
+</html>
