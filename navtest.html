@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proper Navigation Bar</title>
+    <style>
+        * { font-family: sans-serif; }
+        nav {
+            background: green;
+            width: 100%;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+            top: 0;
+            left: 0;
+            position: fixed;
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            font-weight: bold;
+            color: greenyellow;
+            background: #333;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover { background: #777; }
+        main { padding: 5px; padding-top: 3.5rem; }
+        body { background: lightblue; color: #111; }
+        footer {
+            text-align: center;
+            background: rgba(100, 100, 100, 0.5);
+        }
+
+        html, body { margin: 0; padding: 0; height: 100%; }
+
+        @media (max-width: 768px) {
+            body { background: darkslategray; color: white; }
+            main { padding-top: 30vh; }
+            nav a {
+                border: 1px solid white;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                background: linear-gradient(90deg, #00008b, #483d8b);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#top">Top</a>
+        <a href="#bot">Bottom</a>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </nav>
+    <main id="top">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris felis lacus, rhoncus in libero in, luctus pretium ante. Aenean sodales arcu non dignissim bibendum. Sed in efficitur nunc. Phasellus odio nisl, volutpat sed fermentum elementum, cursus ut ante. Morbi aliquam egestas velit, eu convallis felis pharetra vitae. Proin ligula tellus, feugiat eget nibh id, consequat congue metus. Donec maximus justo ac nibh scelerisque, sed lacinia quam congue. Ut nibh lacus, aliquam a tempor sed, maximus a arcu. Nam aliquet, odio porta placerat efficitur, ipsum est auctor metus, id sodales magna eros eu urna. Sed suscipit blandit dui tempor pharetra. Proin ullamcorper blandit viverra. Curabitur pulvinar porttitor molestie. Aliquam a diam eget tellus vestibulum pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent ac rhoncus arcu. Cras pulvinar sem eu mi iaculis ultricies.
+            Aliquam laoreet sed lectus auctor tincidunt. Sed rutrum mi sed sem euismod ultricies. In hendrerit suscipit lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu vestibulum turpis, quis tristique elit. Integer ullamcorper justo ut neque congue interdum a ut tortor. Sed id nisl sodales velit maximus ultrices. Donec sed arcu tincidunt, imperdiet eros sed, tempor orci. Nulla placerat dui odio, id dapibus nibh suscipit imperdiet.
+            Vivamus at diam sapien. Ut dolor arcu, commodo quis leo eget, vulputate euismod leo. Duis eget turpis et quam tempus laoreet in id ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec ut nulla feugiat, bibendum ligula in, accumsan est. Morbi non sem eros. Suspendisse felis purus, convallis sed sodales nec, porta et enim.
+            Morbi non suscipit orci, sed convallis diam. Quisque quis ligula in lorem eleifend imperdiet eu vitae leo. Ut vulputate nunc in ligula facilisis, et ornare neque dignissim. Nunc non euismod ligula. Maecenas eu semper ipsum. Ut feugiat mattis eros. Fusce ut risus lorem. Nullam ac turpis id metus vulputate tristique vitae eu quam. Suspendisse augue nibh, aliquet nec molestie eget, feugiat in sem. Sed volutpat nisl eu dolor vulputate, vitae pharetra diam vestibulum. Praesent ut purus luctus, mollis est et, gravida ante.
+            Nunc quis orci venenatis, efficitur risus sed, consequat massa. Integer tincidunt magna sed quam malesuada commodo. Etiam eu elit lectus. Curabitur venenatis nisl in arcu fringilla, vel rutrum mi condimentum. Fusce tincidunt bibendum maximus. Cras convallis nisi ut elit auctor, in convallis ante sodales. In eleifend sagittis sapien, sit amet malesuada erat rhoncus eget. Duis pellentesque, orci porttitor pulvinar eleifend, risus purus consequat risus, non dapibus ante massa vel ex. Praesent elit felis, vehicula quis ligula ultricies, posuere fringilla ligula. Nullam eget urna lacinia, rhoncus nisl quis, lacinia est. Aenean vel augue in nibh aliquam pulvinar. 
+        </p>
+    </main>
+    <footer id="bot">
+        <b>This is the bottom of the page!</b>
+    </footer>
+</body>
+</html>
