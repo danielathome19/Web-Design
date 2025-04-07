@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog54b</title>
+</head>
+<body>
+    <p>Enter four numbers: </p>
+
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <input type="number" id="n3">
+    <input type="number" id="n4">
+
+    <button onclick="
+        let num1 = document.getElementById('n1').value;
+        let num2 = document.getElementById('n2').value;
+        let num3 = document.getElementById('n3').value;
+        let num4 = document.getElementById('n4').value;
+        num1 = Number(num1);
+        num2 = Number(num2);
+        num3 = Number(num3);
+        num4 = Number(num4);
+        let sum = num1 + num2 + num3 + num4;
+        let avg = sum / 4;
+        document.writeln('Sum: ' + sum + ' Average: ' + avg);
+    ">Calculate</button>
+</body>
+</html>
