@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog58b</title>
+</head>
+<body>
+    <input type="number" id="numA">
+    <input type="number" id="numB">
+    <input type="number" id="numC">
+    <button onclick="calculate()">Calculate</button>
+    <p id="out"></p>
+
+    <script>
+        function calculate() {
+            let A = Number(document.getElementById("numA").value);
+            let B = Number(document.getElementById("numB").value);
+            let C = Number(document.getElementById("numC").value);
+
+            // B**2 is the same as Math.pow(B, 2)
+            let proot = (-B + Math.sqrt(B**2 - 4 * A * C)) / 2 * A;
+            let nroot = (-B - Math.sqrt(B**2 - 4 * A * C)) / 2 * A;
+
+            let out = document.getElementById("out");
+            out.innerText = proot + "     " + nroot;
+        }
+    </script>
+</body>
+</html>
