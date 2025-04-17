@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modals/Dialog</title>
+    <style>
+        dialog {
+            opacity: 0.75;
+            background: linear-gradient(
+                45deg, magenta, purple, slateblue, green
+            );
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="document.getElementById('modal').showModal()">Show Dialog</button>
+
+    <dialog id="modal">
+        <p>This modal dialog has a cool background!</p>
+        <button onclick="document.getElementById('modal').close()">Close</button>
+    </dialog>
+</body>
+</html>
