@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog122a</title>
+</head>
+<body>
+    <p id="out"></p>
+    <script>
+        let msg = "Number &emsp; Square &emsp; Square Root <br>";
+        // &emsp; means "em" or tab space
+        let lcv = 1;  // Loop Control Variable
+        while (lcv <= 50) {  // while (lcv < 51)
+            msg += lcv + " &emsp; " + (lcv**2) +
+                         " &emsp; " + Math.sqrt(lcv).toFixed(4) + "<br>";
+            lcv++;  // lcv += 1     lcv = lcv + 1
+        }
+        document.getElementById("out").innerHTML = msg;
+    </script>
+</body>
+</html>
