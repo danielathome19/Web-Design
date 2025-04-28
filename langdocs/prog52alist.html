@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog52a List</title>
+</head>
+<body>
+    <script>
+        function randInt(min, max) {
+            // Make a random number between [min, max] (as integers)
+            return Math.round(Math.random() * max) + (min-1);
+        }
+
+        function getAreaAndPerim(length, width) {
+            let area = length * width;
+            let perim = 2 * length + 2 * width;
+            return [area, perim];
+        }
+
+        let num1 = randInt(1, 10);
+        let num2 = randInt(2, 20);
+        let ap = getAreaAndPerim(num1, num2);
+        let area = ap[0];  // Get first item from array
+        let perim = ap[1];
+        document.writeln(
+            "Length: " + num1 + "<br>" +
+            "Width: " + num2 + "<br>" +
+            "Area: " + area + "<br>" +
+            "Perim: " + perim
+        );
+
+        let arr = [];  // Empty list
+        for (let lcv = 0; lcv < 10; lcv++) {
+            arr.push(randInt(lcv, 100));
+        }
+
+        for (let lcv = 0; lcv < arr.length; lcv++) {
+            document.write("<br>" + arr[lcv]);
+        }
+
+        alert(arr);  // View in browser, not live preview
+    </script>
+</body>
+</html>
