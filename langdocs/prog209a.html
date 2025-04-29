@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog209a</title>
+</head>
+<body>
+    <script>
+        let nums = [];  // Empty array
+        for (let i = 0; i < 400; i++) {
+            // Randomly generate an int between [1, 1000]
+            let n = Math.floor(Math.random() * 1000) + 1;
+            nums.push(n);
+        }
+
+        let lt = 0;
+        let gte = 0;
+        for (let i = 0; i < nums.length; i++) {
+            let current = nums[i];
+            if (current >= 500) {
+                gte++;  // gte += 1   or   gte = gte +1
+            } else {
+                lt++;
+            }
+        }
+        document.writeln("# of numbers >= 500: " + gte + "<br>");
+        document.writeln("# of numbers < 500: " + lt + "<br>");
+        document.writeln("# of numbers: " + nums.length + "<br><br>");
+        document.writeln(nums);
+    </script>
+</body>
+</html>
