@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Notes</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+</head>
+<body>
+    <p id="p1">This is a paragraph</p>
+    <p id="p2">Here's another paragraph</p>
+    <p>Input field:
+        <input type="text" id="p3" value="placeholder"></p>
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+    <button id="btn4">Append Text</button>
+
+    <p id="out">This is some <b>bold</b> text in a paragraph</p>
+    <button id="outbtn">Alert</button>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <button id="lbtn">Append List Item</button>
+
+    <div style="background: green; width: 100px;
+                height: 100px; position: absolute;"></div>
+    <button id="abtn">Run Animation</button>
+
+    <script>
+        // With jQuery, all our code goes in document.ready
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#p1").text("Hello, world!");
+            });
+            $("#btn2").click(function(){
+                $("#p2").html("<b>Hello, world!</b>");
+            });
+            $("#btn3").click(function(){
+                $("#p3").val("Hi!");
+            });
+
+            $("#outbtn").click(function(){
+                alert($("#out").text());  // or .html
+            });
+
+            $("#btn4").click(function(){
+                $("p").append(" <b>Appended Text</b>");
+            });
+            $("#lbtn").click(function(){
+                $("ol").append("<li>Appended Item</li>");
+            });
+
+            $("#abtn").click(function(){
+                $("div").animate({left: '250px'});
+                $("div").fadeOut(3000);  // ms
+            });
+        });
+    </script>
+</body>
+</html>
